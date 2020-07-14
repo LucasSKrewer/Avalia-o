@@ -1,0 +1,38 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+       //raio pra uma variavel
+        let raio = prompt("digite o raio:");
+
+        //raio é nada, pessoa só clicou ok
+        //transformamos em numero só depois para checar
+        if (raio === null) {
+            alert("valor invalido");
+        } else {
+            //raio pra float
+            raio = parseFloat(raio);
+            //raio é NaN (not a number)
+            if (isNaN(raio)) {
+                alert("valor invalido");
+            } else {
+                //P = 2.pi.r
+                let perimetro = 2 * Math.PI * raio;
+                //A = PI . r²
+                let area = Math.PI * Math.pow(raio, 2);
+                //D = 2 . r
+                let diametro = 2 * raio;
+
+                alert(`raio = ${raio}\n\nperimetro -> ${perimetro}\narea -> ${area}\ndiametro -> ${diametro}`);
+            }
+        }
+    </script>
+
+</body>
+
+</html>
